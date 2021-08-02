@@ -1,0 +1,265 @@
+{
+	"info": {
+		"_postman_id": "ac00f973-04de-4e3f-a273-260ab68579f8",
+		"name": "Elastic Spring",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Author",
+			"item": [
+				{
+					"name": "Create Author",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"firstName\": \"Aron 2\",\n    \"lastName\":\"Sipos 2\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/authors",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"authors"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "List Authors",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"firstName\": \"Aron\",\n    \"lastName\":\"Sipos\",\n    \"labels\": [\"beginner\",\"elastic\"]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/authors",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"authors"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Author",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"firstName\": \"Aron21\",\n    \"lastName\":\"Sipos2\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/authors/_wZT1XoBbsX2hehb7-x9",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"authors",
+								"_wZT1XoBbsX2hehb7-x9"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Author by id",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"firstName\": \"Aron\",\n    \"lastName\":\"Sipos\",\n    \"labels\": [\"beginner\",\"elastic\"]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/authors/_wZT1XoBbsX2hehb7-x9",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"authors",
+								"_wZT1XoBbsX2hehb7-x9"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Author by id",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/authors/_gYe1XoBbsX2hehbSOyo",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"authors",
+								"_gYe1XoBbsX2hehbSOyo"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Course",
+			"item": [
+				{
+					"name": "Create Course",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\": \"3rd course\",\n    \"description\": \"My 3nd course\",\n    \"labels\": [\n        \"two\"\n    ],\n    \"authors\": [{\n        \"id\": \"07Bw7noBxChySmwAO2er\",\n        \"firstName\": \"Aron\",\n        \"lastName\":\"Sipos\"\n    },\n    {\n    \"id\": \"AiHyB3sB8ubrB7OqIE-X\",\n    \"firstName\": \"Aron 2\",\n    \"lastName\": \"Sipos 2\"\n}\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/courses",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"courses"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Course by id",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"firstName\": \"Aron\",\n    \"lastName\":\"Sipos\",\n    \"labels\": [\"beginner\",\"elastic\"]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/courses/AyHyB3sB8ubrB7OqZU-v",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"courses",
+								"AyHyB3sB8ubrB7OqZU-v"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "List Courses",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"firstName\": \"Aron\",\n    \"lastName\":\"Sipos\",\n    \"labels\": [\"beginner\",\"elastic\"]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/courses?search=Aron",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"courses"
+							],
+							"query": [
+								{
+									"key": "search",
+									"value": "Aron"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
