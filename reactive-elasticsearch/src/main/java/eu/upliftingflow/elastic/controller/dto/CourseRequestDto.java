@@ -19,6 +19,5 @@ public class CourseRequestDto {
     @NotEmpty
     private Set<String> labels;
     @NotEmpty
-    @Valid
-    private Set<AuthorDto> authors;
+    private Set<String> authorIds;
 }

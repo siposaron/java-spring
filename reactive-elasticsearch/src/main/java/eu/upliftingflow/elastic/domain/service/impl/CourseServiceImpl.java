@@ -2,6 +2,7 @@ package eu.upliftingflow.elastic.domain.service.impl;
 
 import eu.upliftingflow.elastic.domain.mapper.CourseDocumentMapper;
 import eu.upliftingflow.elastic.domain.model.Course;
+import eu.upliftingflow.elastic.domain.repository.AuthorRepository;
 import eu.upliftingflow.elastic.domain.repository.CourseRepository;
 import eu.upliftingflow.elastic.domain.service.CourseService;
 import eu.upliftingflow.elastic.exception.CourseException;
@@ -20,11 +21,13 @@ import reactor.core.publisher.Mono;
 public class CourseServiceImpl implements CourseService {
 
     private final CourseRepository courseRepo;
+    private final AuthorRepository authorRepo;
 
     private final ReactiveElasticsearchClient client;
 
     @Override
     public Mono<Course> createCourse(final Course course) {
+
         return courseRepo.save(course);
     }
 
